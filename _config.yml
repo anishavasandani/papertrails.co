@@ -1,0 +1,130 @@
+
+title: papertrails
+locale: en_US
+description: Brooklyn-based mapmakers by the way of Los Angeles, tastefully curating your next travel destination.
+owner:
+  name: Anisha Vasandani
+  email: anisha@papertrails.co
+  url: http://www.papertrails.co
+first_published: 2016 # if migrating another site, the year of your first publish
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.papertrails.com" # the base hostname & protocol for your site
+
+# on landing page
+# - set the greeting only if you want to display the first green section
+greeting:
+  title: Welcome!
+  text: I hope you enjoy my collection
+# - title for your blog's featured posts
+features-title: Featured topics
+# - displayed at the bottom
+closing-head: Thanks for visiting
+closing-para: Feel free to get in touch. Cheers!
+
+# choose where to put back and next links:
+# top, bottom, both, none
+navlinks: bottom
+
+# expecting more works? mark your list as in-progress
+works_in_progress: yes
+
+# on all pages (and the first three you list display with greeting, if included)
+social:
+  twitter:
+  github:
+  #linkedin-square:
+  #facebook-official:
+  #google-plus-square:
+  #flickr:
+  instagram: https://www.instagram.com/papertrailsco/
+  #youtube-square:
+  spotify: https://open.spotify.com/user/1229903135
+  email: /contact/
+  #stack-overflow:
+  #vimeo:
+  #reddit:
+  #stubleupon:
+  #delicious:
+  #pied-piper:
+  #digg:
+  #soundcloud:
+  #deviantart:
+  #angellist:
+  #tumblr-square:
+  #stackexchange:
+  #weibo:
+  #trello:
+  #foursquare:
+  #linux:
+  #bitbucket-square:
+  #vk:
+  #slack:
+  #vine:
+  #weixin:
+  #yelp:
+  #skyatlas:
+  #leanpub:
+  #connectdevelop:
+  #ils:
+  #forumbee:
+  #tripadvisor:
+  #amazon:
+
+# Jekyll configuration
+
+source: src
+
+# Build settings
+permalink: /:categories/:title.html
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude: ['site.bat']
+include: ['_pages','.htaccess']
+defaults:
+  - scope:
+      path: _pages
+    values:
+      layout: page
+      #permalink: /:slug/ # dunna work. See github.com/jekyll/jekyll/issues/2280
+  - scope:
+      path: _posts
+    values:
+      layout: post
+  - scope:
+      path: _drafts
+    values:
+      layout: post
+
+# sitemap.xml
+
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+        - "/gastronomy/index.html"
+        - "/mixology/index.html"
+        - "/on_repeat/index.html"
+        - "/phonetography/index.html"
+        - "/travel/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
+
+# to initialize arrays in assignments (assign myarr = site.empty_array)
+# (easier to grok than assign myarr = '' | split',')
+empty_array: []
